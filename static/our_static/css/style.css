@@ -1,0 +1,62 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+#search
+{
+	display: none;
+	margin-bottom: 0;
+	border-top: 1px solid #111;
+	border-bottom: 1px solid #111;
+}
+
+#search form
+{
+	margin: 0;
+}
+
+#search input
+{
+	color: #ccc;
+	border-bottom: 1px solid #333;
+}
+
+#search input:focus
+{
+	box-shadow: none;
+	border-bottom: 1px solid #00AE96;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+@media (min-width:992px) {
+    #aside {
+        width:250px;
+    }
+}
+
+@media (max-width:992px) {
+    #aside.pinned, #aside.pin-bottom {
+        position:static !important;
+        top: auto !important;
+    }
+}

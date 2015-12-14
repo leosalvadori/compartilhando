@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}
+    <title>Cadastro</title>
+{% endblock title %}
+
+{% block content %}
+
+    <h1>Cadastro</h1>
+    <form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button class="btn waves-effect waves-light orange btn-large" type="submit" name="action">Registrar
+        <i class="material-icons right">send</i>
+    </button>
+   </form>
+
+{% endblock content %}

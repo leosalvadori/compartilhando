@@ -1,0 +1,61 @@
+<nav class="light-grey lighten-1" role="navigation">
+<div class="nav-wrapper container"><a id="logo-container" href="{% url 'home' %}" class="brand-logo">Compartilhando</a>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="{% url 'registrar' %}">cadastro</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="#%21" id="toggle-search"><i class="large mdi-action-search"></i></a></li>
+    <li><a href="{% url 'pagina_de_login' %}">Login</a></li>
+    <li><a href="{% url 'logout' %}" type="submit" name="action">logout</a></li>
+    <li><a href="#modalLogin" class="modal-trigger"><i class="mdi-action-perm-identity"></i></a></li>
+    <li>{{ request.user }}</li>
+  </ul>
+  <ul id="nav-mobile" class="side-nav">
+    <li><a href="#">Cadastro</a></li>
+  </ul>
+  <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+</div>
+</nav>
+
+<div class="row white-text grey darken-3" id="search">
+
+    <div class="container">
+        <form action="https://www.google.com/search" method="get">
+            <input class="form-control" name="q" placeholder="Procurar..." type="text">
+            <input name="as_sitesearch" value="" type="hidden">
+        </form>
+    </div>
+
+</div>
+
+<!--login modal-->
+<div id="modalLogin" class="modal">
+    <div class="modal-content">
+        <h2 class="center-align">Login</h2>
+        <div class="center-align">
+            <div class="divider"></div>
+            <form class="col s12">
+                <div class="row center-align">
+                    <div class="input-field col m10 offset-m1 blue-text">
+                        <i class="mdi-action-account-circle prefix"></i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Username</label>
+                    </div>
+                    <div class="input-field col m10 offset-m1 blue-text ">
+                        <i class="mdi-action-lock-open prefix"></i>
+                        <input id="icon_password" type="password" class="validate">
+                        <label for="icon_password">Password</label>
+                    </div>
+                    <div class="input-field col m10 offset-m1 blue-text">
+                        <input type="checkbox" class="blue-text" id="filled-in-box" checked="checked">
+                        <label for="filled-in-box">Remember me next time</label>
+                    </div>
+                </div>
+            </form>
+            <div class="divider"></div>
+            <p>
+                <a href="#" class="btn btn-flat white modal-close">Cancel</a> &nbsp;
+                <a href="#" class="waves-effect waves-blue blue btn btn-flat modal-action modal-close">Login</a>
+            </p>
+        </div>
+    </div>
+</div>
