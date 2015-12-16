@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}
+    <title>Cadastro</title>
+{% endblock title %}
+
+{% block content %}
+
+    <h1>Cadastro</h1>
+    <form method="POST">
+    {% csrf_token %}
+
+    <p><label for="id_subject">Título</label>
+    <input id="id_subject" type="text" name="titulo" maxlength="100" /></p>
+    <p><label for="id_message">Descrição:</label>
+    <textarea id="id_message" name="descricao" class="materialize-textarea"></textarea></p>
+
+    <button class="btn waves-effect waves-light orange btn-large" type="submit" name="action">Registrar
+        <i class="material-icons right">send</i>
+    </button>
+   </form>
+
+{% endblock content %}

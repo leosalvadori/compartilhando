@@ -52,3 +52,8 @@ def login_req(request):
 def logout_view(request):
     logout(request)
     return redirect('home')
+
+class anuncioForm(CreateView):
+    template_name = 'anuncio_cadastro.html'
+    model = anuncio
+    fields = ['titulo','descricao']

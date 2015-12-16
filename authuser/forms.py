@@ -57,3 +57,10 @@ class UserCreationForm(forms.ModelForm):
         if commit:
             user.save()
         return user
+
+class anuncioForm(forms.ModelForm):
+
+    class Meta:
+        model = anuncio
+        fields = ['titulo']
+        exclude = ['descricao']

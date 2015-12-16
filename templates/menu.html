@@ -6,6 +6,7 @@
     <li><a href="#%21" id="toggle-search"><i class="large mdi-action-search"></i></a></li>
     <li><a href="{% url 'pagina_de_login' %}">Login</a></li>
     <li><a href="{% url 'logout' %}" type="submit" name="action">logout</a></li>
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Anúncios<i class="material-icons right">arrow_drop_down</i></a></li>
     <li><a href="#modalLogin" class="modal-trigger"><i class="mdi-action-perm-identity"></i></a></li>
     <li>{{ request.user }}</li>
   </ul>
@@ -59,3 +60,11 @@
         </div>
     </div>
 </div>
+
+<!-- Dropdown aníncio -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="{% url 'cria_anuncio' %}">Cadastrar</a></li>
+  <li><a href="#!">Procurar</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">Dividido</a></li>
+</ul>

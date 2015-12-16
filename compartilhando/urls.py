@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^registrar/$', 'authuser.views.registrar', name='registrar'),
     url(r'^login/$', 'authuser.views.login_req', name='pagina_de_login'),
     url(r'^logout/$', 'django.contrib.auth.views.logout',{'next_page': 'home'}, name='logout'),
+    url(r'cadastrar-anuncio/$', anuncioForm.as_view(), name='cria_anuncio'),
     url(r'^admin/', admin.site.urls),
 ]
